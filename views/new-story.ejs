@@ -9,8 +9,20 @@
         <!--Main body begins here-->
         <div class="container-fluid col-sm-offset-2">
             <div class="row">
-                <h3 align="center">you are logged in</h3>
+                <h3 align="center">hello <%= session.username %>!, you are logged in</h3>
                 <br/><br/><br/>
+                <h3 class="col-sm-offset-1">You are now all set to create your own stories, just fill in the below details</h3>
+                <ol class="col-sm-offset-1">
+                    <li>Title of the story</li>
+                    <li>upload an image if you want</li>
+                    <li>a quick summary</li>
+                    <li>Actual story content</li>
+                </ol>
+
+                <p class="col-sm-offset-1">
+                    if you do not have anything to  share, then check these <a href="/stories">Stories</a>
+                </p>
+
                                 
 
             </div>
@@ -18,5 +30,58 @@
         </div>
     
             <!--Main body ends here-->
+            <!-- form starts here-->
+            <div class="row col-sm-offset-3">
+                    <div class="container">
+                       <div class="col-lg-10">
+                        <form action="/add-story" method="post">
+            
+                            <div class="form-group">
+                               <label for="name" class="col-sm-2 control-label">Title</label>
+                                 <div class="col-sm-6">
+                                 <input type="text"name="title" required class="form-control" placeholder="Story Title"/>
+            
+                                 </div>
+            
+                             </div><br/><br/><br/>
+            
+                             <div class="form-group">
+                                <label for="name" class="col-sm-2 control-label">Image Link</label>
+                                  <div class="col-sm-6">
+                                  <input type="text"name="imageLink" required class="form-control" placeholder="Upload the image to imgur and put the direct link here"/>
+                                  </div>
+                            </div>
+                             <br/><br/>
+            
+                             <div class="form-group">
+                                                <label for="message" class="col-sm-2 control-label">Summary</label>
+                                                  <div class="col-sm-6">
+                                                   <textarea class="form-control" required name="summary" rows="4" placeholder="A short description"></textarea>
+                                                  </div>
+                            </div><br/><br/><br/><br/><br/><br/>
+            
+                            <div class="form-group">
+                              <label for="name" class="col-sm-2 control-label">Post</label>
+                               <div class="col-lg-10">
+                                <textarea name="content" id="storyContent" required rows="8" class="form-control"></textarea>
+                               </div>
+                            </div>
+                            <br><br>
+            
+                            <div class="form-group" >
+                                 <div class="col-sm-offset-6 col-sm-6" style="padding-top: 20px">
+                                   <button  type="submit" class="btn btn-primary">Submit your Story</button>
+                                 </div>
+                            </div>
+            
+                        </form>
+            
+            
+                        </div>
+                    </div>
+                </div>
+
+
+            <!-- form ends here-->
     </body>
 </html>

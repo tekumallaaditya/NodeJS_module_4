@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/sidebar.css">
+        <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Abel|Open+Sans:400,600" rel="stylesheet" />
+        <link rel="icon" href="/images/favicon.jpg" type="image/x-icon"/>
+        <link href="/css/loginForm.css" rel="stylesheet">
+    </head>
+    <body>
+        <% include partials/sideNarbar.ejs %>
+        <div class="container col-md-offset-3">
+            <div class="row">
+                <div class="panel-group">
+                    <% for (var i = 0; i < stories.length; i++) { %>
+                        <div class="panel panel-success">
+                            <div class="panel-heading">
+                                <h2><%=stories[i].title %></h2>
+                            </div>
+                            <div class="panel-body">
+                                <h3><%=stories[i].author %></h3>
+                                <h4><%=stories[i].summary %></h4>
+                                <p><%=stories[i].content %></p>
+                            </div>
+    
+                        </div>
+                        <p></p>
+                    <% } %>
+                </div>                
+            </div>
+        </div>        
+    </body>
+</html>
