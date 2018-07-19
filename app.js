@@ -14,7 +14,7 @@ var user = require('./routes/user.js');
 var story = require('./routes/story.js');
 
 //below is the port
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 8080;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
