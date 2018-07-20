@@ -31,6 +31,14 @@ app.post('/newUser', user.Ucreate );
 app.post('/authenticate', user.login);
 app.post('/add-story', story.addstory);
 
+app.use(function(req, res){
+    console.log('invalid request');
+    res.status(404).render('404');
+});
+app.use(function(err, req, res, next){
+    res.status(500).render('500');
+});
+
 app.listen(port, function(){
     console.log('server up and running on port %s', port);
 });
