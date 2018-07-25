@@ -4,7 +4,7 @@ var bcrypt=require('bcrypt');
 var SALT_WORK_FACTOR = 10;
 
 //var dbURL = 'mongodb://localhost/testhome';
-var dbURL = 'mongodb://tekumallaaditya:Parasuram88@ds243931.mlab.com:43931/leaveyourmarks'
+var dbURL = 'mongodb://userID:password@ds243931.mlab.com:43931/leaveyourmarks'
 
 mongoose.connect(dbURL);
 
